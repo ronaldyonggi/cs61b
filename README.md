@@ -23,4 +23,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 2 | Fri 02/01 | 2.3, 2.4 | 5. DLLists, Arrays :heavy_check_mark: | --- | --- | --- |
 | 3 | Mon 02/04 | 2.5 | 6. ALists, Resizing, vs. SLists :heavy_check_mark: | Linked Lists, Arrays :heavy_check_mark: | Testing, Debugging :heavy_check_mark: | Project 1A: Data Structures :heavy_check_mark: |
 | 3 | Wed 02/06 | 3.1, Optional: [TDD is Dead](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html) <br> [Unit Tests are Waste](http://www.rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf) <br> [Response](http://henrikwarne.com/2014/09/04/a-response-to-why-most-unit-testing-is-waste/) | 7. Testing :heavy_check_mark: | Linked Lists, Arrays Exam Prep | -- |
-| 3 | Fri 02/08 | 4.1 | 8. Inheritance, Implements | --- | --- | --- |
+| 3 | Fri 02/08 | 4.1 | 8. Inheritance, Implements :heavy_check_mark: | --- | --- | --- |
+| 4 | Mon 02/11 | 4.2 | 9. Extends, Casting, Higher Order Functions | Inheritance | Peer Code Review | Project 1B: Testing and HoFs |
+| 4 | Wed 02/13 | 4.3 | 10. Subtype Polymorphism vs. HoFs | Inheritance Exam Prep | --- | Project 1 Gold: Autograding | 
+| 4 | Fri 02/15 | 6.1, 6.2, 6.3, 6.4 | 11. Exceptions, Iterators, Object Methods | --- | --- | --- | 
