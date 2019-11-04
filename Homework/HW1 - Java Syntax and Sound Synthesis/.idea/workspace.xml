@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="44208427-63f2-466b-827a-1598f05afbca" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Szn61JER9DDWxTXQhVQjrY38FO" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/hw1/es/datastructur/synthesizer/BoundedQueue.java" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.TestArrayRingBuffer.testIteratorEquals">
+    <configuration name="GuitarHeroLite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GuitarHeroLite" />
+      <module name="HW1 - Java Syntax and Sound Synthesis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TTFAF" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TTFAF" />
+      <module name="HW1 - Java Syntax and Sound Synthesis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestArrayRingBuffer.testIteratorEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW1 - Java Syntax and Sound Synthesis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.datastructur.synthesizer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.datastructur.synthesizer" />
+      <option name="MAIN_CLASS_NAME" value="es.datastructur.synthesizer.TestArrayRingBuffer" />
+      <option name="METHOD_NAME" value="testIteratorEquals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGuitarString.testPluckTheAString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW1 - Java Syntax and Sound Synthesis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.datastructur.synthesizer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.datastructur.synthesizer" />
+      <option name="MAIN_CLASS_NAME" value="es.datastructur.synthesizer.TestGuitarString" />
+      <option name="METHOD_NAME" value="testPluckTheAString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGuitarString.testTic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HW1 - Java Syntax and Sound Synthesis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.datastructur.synthesizer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.datastructur.synthesizer" />
+      <option name="MAIN_CLASS_NAME" value="es.datastructur.synthesizer.TestGuitarString" />
+      <option name="METHOD_NAME" value="testTic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestArrayRingBuffer.testIteratorEquals" />
+        <item itemvalue="Application.TTFAF" />
+        <item itemvalue="Application.GuitarHeroLite" />
+        <item itemvalue="JUnit.TestGuitarString.testTic" />
+        <item itemvalue="JUnit.TestGuitarString.testPluckTheAString" />
+      </list>
+    </recent_temporary>
+  </component>
+</project>
