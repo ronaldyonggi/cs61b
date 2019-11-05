@@ -30,5 +30,5 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 5 | Wed 02/20 | -- | 12. Coding in the Real World, Review | Iterators, Iterables :heavy_check_mark: | HugLife :heavy_check_mark: | Midterm 1 |
 | 5 | Fri 02/22 | 8.1, 8.2, Algs 170-198 | 13. Asymptotics I :heavy_check_mark: | Exceptions, Iterators, Iterables Exam Prep | -- | HW1: Java Syntax and Sound Synthesis :heavy_check_mark: |
 | 6 | Mon 02/25 | 9.1, 9.2, 9.3, 9.4, 9.5, Algs 216-233 | 14. Disjoint Sets :heavy_check_mark: | Disjoint Sets and Asymptotics :pencil2: | Disjoint Sets | --- |
-| 6 | Wed 02/27 | 8.3, 8.4, Algs 170-198 | 15. Asymptotics II | Disjoint Sets and Asymptotics Exam Prep | Challenge Disjoint Sets | --- |
+| 6 | Wed 02/27 | 8.3, 8.4, Algs 170-198 | 15. Asymptotics II :heavy_check_mark: | Disjoint Sets and Asymptotics Exam Prep | Challenge Disjoint Sets | --- |
 | 6 | Fri 03/01 | 10.1, 10.2, Algs 396 - 406 | 16. ADTs, Sets, Maps, BSTs | --- | --- | HW2: Percolation |
