@@ -31,4 +31,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 5 | Fri 02/22 | 8.1, 8.2, Algs 170-198 | 13. Asymptotics I :heavy_check_mark: | Exceptions, Iterators, Iterables Exam Prep | -- | HW1: Java Syntax and Sound Synthesis :heavy_check_mark: |
 | 6 | Mon 02/25 | 9.1, 9.2, 9.3, 9.4, 9.5, Algs 216-233 | 14. Disjoint Sets :heavy_check_mark: | Disjoint Sets and Asymptotics :pencil2: | Disjoint Sets | --- |
 | 6 | Wed 02/27 | 8.3, 8.4, Algs 170-198 | 15. Asymptotics II :heavy_check_mark: | Disjoint Sets and Asymptotics Exam Prep | Challenge Disjoint Sets | --- |
-| 6 | Fri 03/01 | 10.1, 10.2, Algs 396 - 406 | 16. ADTs, Sets, Maps, BSTs | --- | --- | HW2: Percolation |
+| 6 | Fri 03/01 | 10.1, 10.2, Algs 396 - 406 | 16. ADTs, Sets, Maps, BSTs :heavy_check_mark: | --- | --- | HW2: Percolation |
+| 7 | Mon 03/04 | 11.1, 11.2, 11.3, Algs 424-431, 432-448 (extra) | 17. B-Trees (2-3, 2-3-4 Trees) | More Asymptotics, Search Trees | TreeMap | -- |
+| 7 | Wed 03/06 | 11.4, 11.5, Algs 424-431, 432-448 (extra) | 18. Red Black Trees | More Asymptotics, Search Trees Exam Prep | Challenge Binary Search Tree Performance | HW3: Hashing |
+| 7 | Fri 03/08 | 12.1, 12.2, 12.3, 12.4, 12.5, Algs 458-468, 478-479, 468-475(extra) | 19. Hashing | --- | --- | --- |
