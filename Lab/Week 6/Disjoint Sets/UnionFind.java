@@ -3,21 +3,26 @@ import java.util.NoSuchElementException;
 public class UnionFind {
 
     // TODO - Add instance variables?
-    int[] parent;
-    int[] size;
+    private int[] parents;
 
     /* Creates a UnionFind data structure holding n vertices. Initially, all
        vertices are in disjoint sets. */
     public UnionFind(int n) {
         // TODO
-        parent = new int[n];
-        size = new int[n];
+        /**
+         * Create an array of size n and initiate all the elements by -1 since
+         * initially, all numbers are individual roots.
+         */
+        parents = new int[n];
+        for (int i = 0; i < n; i++) {
+            parents[i] = -1;
+        }
     }
 
     /* Throws an exception if v1 is not a valid index. */
     private void validate(int vertex) {
         // TODO
-        if (vertex < 0 || vertex > parent.length){
+        if (vertex < 0 || vertex > parents.length - 1){
             throw new IllegalArgumentException();
         }
     }
@@ -25,20 +30,24 @@ public class UnionFind {
     /* Returns the size of the set v1 belongs to. */
     public int sizeOf(int v1) {
         // TODO
-        return size[v1];
+        validate(v1);
+        return -parents[find(v1)];
     }
 
     /* Returns the parent of v1. If v1 is the root of a tree, returns the
        negative size of the tree for which v1 is the root. */
     public int parent(int v1) {
         // TODO
-        return parent[v1];
+        validate(v1);
+        return parents[v1];
     }
 
     /* Returns true if nodes v1 and v2 are connected. */
     public boolean connected(int v1, int v2) {
         // TODO
-        return (parent[v1] == parent[v2]);
+        validate(v1);
+        validate(v2);
+        return find(v1) == find(v2);
     }
 
     /* Connects two elements v1 and v2 together. v1 and v2 can be any valid 
@@ -48,10 +57,16 @@ public class UnionFind {
        change the sets but may alter the internal structure of the data. */
     public void union(int v1, int v2) {
         // TODO
-        if (size[parent[v1]] > size[parent[v2]]) {
-            parent[v2] = parent[v1];
-        } else {
-            parent[v1] = parent[v2];
+        validate(v1);
+        validate(v2);
+        if (!connected(v1, v2)) {
+            if (sizeOf(v1)> sizeOf(v2)) {
+                parents[v2] = find(v1);
+                parents[find(v1)] --;
+            } else {
+                parents[v1] = find(v2);
+                parents[find(v2)] --;
+            }
         }
     }
 
@@ -59,11 +74,27 @@ public class UnionFind {
        allowing for fast search-time. */
     public int find(int vertex) {
         // TODO
-        if (parent[vertex] < 0) {
-            return vertex;
-        } else {
-            return find(parent[vertex]);
+        /**
+         * The idea is to keep looking at the parent of the index until we find an index
+         * whose parent is negative. That means that index is the root.
+         */
+        validate(vertex);
+        int root = vertex;
+        while (parent(root) > -1) {
+            root = parent(root);
         }
+
+        /**
+         * Apply path-compression by assigning root to the parent of the indeces that
+         * we went through in the first place to find the root
+         */
+        int temp;
+        while (vertex != root) {
+            temp = parent(vertex);
+            parents[vertex] = root;
+            vertex = temp;
+        }
+        return root;
     }
 
 }
