@@ -33,5 +33,11 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 6 | Wed 02/27 | 8.3, 8.4, Algs 170-198 | 15. Asymptotics II :heavy_check_mark: | Disjoint Sets and Asymptotics Exam Prep | Challenge Disjoint Sets | --- |
 | 6 | Fri 03/01 | 10.1, 10.2, Algs 396 - 406 | 16. ADTs, Sets, Maps, BSTs :heavy_check_mark: | --- | --- | HW2: Percolation |
 | 7 | Mon 03/04 | 11.1, 11.2, 11.3, Algs 424-431, 432-448 (extra) | 17. B-Trees (2-3, 2-3-4 Trees) | More Asymptotics, Search Trees | TreeMap | -- |
-| 7 | Wed 03/06 | 11.4, 11.5, Algs 424-431, 432-448 (extra) | 18. Red Black Trees | More Asymptotics, Search Trees Exam Prep | Challenge Binary Search Tree Performance | HW3: Hashing |
-| 7 | Fri 03/08 | 12.1, 12.2, 12.3, 12.4, 12.5, Algs 458-468, 478-479, 468-475(extra) | 19. Hashing | --- | --- | --- |
+| 7 | Wed 03/06 | 11.4, 11.5, Algs 424-431, 432-448 (extra) | 18. Red Black Trees :heavy_check_mark: | More Asymptotics, Search Trees Exam Prep | Challenge Binary Search Tree Performance | HW3: Hashing |
+| 7 | Fri 03/08 | 12.1, 12.2, 12.3, 12.4, 12.5, Algs 458-468, 478-479, 468-475(extra) | 19. Hashing :heavy_check_mark: | --- | --- | --- |
+| 8 | Mon 03/11 | 13.1, 13.2, 13.3, Algs 308-320 | 20. Heaps and PQs :heavy_check_mark: | LLRBs, Hashing, Heaps | HashMap | --- |
+| 8 | Wed 03/13 | 14.1, 15.1, 15.2, 15.3, Algs 730-752 | 21. Prefix Operations and Tries :heavy_check_mark: | LLRBs, Hashing, Heaps Exam Prep | Challenge Heaps and Hashes | Proj 2: HeapPQ/KD-Tree HeapPQ|
+| 8 | Fri 03/15 | 16.1, 16.2, 16.3 | 22. Range, Searching and Multi-Dimensional Data | --- | --- | --- |
+| 9 | Mon 03/18 | 17.1, 17.2, 17.3, 17.4, Algs 538-542, 566-583 | 23. Tree and Graph Traversals | Tries, K-d Trees, Tree Traversals | Tries | --- |
+| 9 | Wed 03/20 | 18.1, 18.2, Algs 538-542, 566-583 | 24. Graph Traversals and Implementations | Tries, K-d Trees, Tree Traversals Exam Prep | Challenge Graphs | --- |
+| 9 | Fri 03/22 | 19.1, 19.2, 19.3, Algs 638 - 657 | 25. Shortest Paths | --- | --- | --- |
