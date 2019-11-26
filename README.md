@@ -25,7 +25,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 2 | Fri 02/01 | 2.3, 2.4 | 5. DLLists, Arrays :heavy_check_mark: <br> :warning: A Level incomplete | --- | --- | --- |
 | 3 | Mon 02/04 | 2.5 | 6. ALists, Resizing, vs. SLists :heavy_check_mark: :trophy: | Linked Lists, Arrays :heavy_check_mark: | Testing, Debugging :heavy_check_mark: | Project 1A: Data Structures :heavy_check_mark: |
 | 3 | Wed 02/06 | 3.1, Optional: [TDD is Dead](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html) <br> [Unit Tests are Waste](http://www.rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf) <br> [Response](http://henrikwarne.com/2014/09/04/a-response-to-why-most-unit-testing-is-waste/) | 7. Testing :heavy_check_mark: :trophy: | Linked Lists, Arrays Exam Prep | -- |
-| 3 | Fri 02/08 | 4.1 | 8. Inheritance, Implements :heavy_check_mark: | --- | --- | --- |
+| 3 | Fri 02/08 | 4.1 | 8. Inheritance, Implements :heavy_check_mark: :warning: | --- | --- | --- |
 | 4 | Mon 02/11 | 4.2 | 9. Extends, Casting, Higher Order Functions :heavy_check_mark: | Inheritance :heavy_check_mark: | Peer Code Review | Project 1B: Testing and HoFs :heavy_check_mark: |
 | 4 | Wed 02/13 | 4.3 | 10. Subtype Polymorphism vs. HoFs :heavy_check_mark: | Inheritance Exam Prep | --- | Project 1 Gold: Autograding :heavy_check_mark: | 
 | 4 | Fri 02/15 | 6.1, 6.2, 6.3, 6.4 | 11. Exceptions, Iterators, Object Methods :heavy_check_mark: | --- | --- | --- | 
@@ -43,3 +43,18 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 9 | Mon 03/18 | 17.1, 17.2, 17.3, 17.4, Algs 538-542, 566-583 | 23. Tree and Graph Traversals :heavy_check_mark: | Tries, K-d Trees, Tree Traversals | Tries | --- |
 | 9 | Wed 03/20 | 18.1, 18.2, Algs 538-542, 566-583 | 24. Graph Traversals and Implementations | Tries, K-d Trees, Tree Traversals Exam Prep | Challenge Graphs | --- |
 | 9 | Fri 03/22 | 19.1, 19.2, 19.3, Algs 638 - 657 | 25. Shortest Paths | --- | --- | --- |
+| 10 | Mon 04/01 | 20.1, 20.2, Algs 604-630 | 26. Minimum Spanning Trees | DFS, BFS, Shortest Paths, MSTs | --- | --- |
+| 10 | Wed 04/03 | 21.1, 21.2, 21.3, 21.4 | 27. Reductions and Decomposition | DFS, BFS, Shortest Paths, MSTs Exam Prep | -- | -- |
+| 10 | Fri 04/05 | None | 28. No Lecture | --- | --- | Midterm 2 |
+| 11 | Mon 04/08 | Algs 244 - 275, 323 - 327 | 29. Basic Sorts | Graphs | Merge and Quicksort | HW4: Puzzle Solver |
+| 11 | Wed 04/10 | Algs 288-296, 302 | 30. Quick Sort | Graphs Exam Prep | Challenge Beards and Beds | Proj 2C: Bear Maps|
+| 11 | Fri 04/12 | None | 31. Software Engineering I | --- | --- | --- |
+| 12 | Mon 04/15 | Algs 341-347 | 32. More Quick Sort, Sorting Summary | Sorting, ADTs | Getting Started on Project 3 | -- |
+| 12 | Wed 04/17 | Algs 279-282 | 33. Sorting and Algorithmic Bounds | Sorting Exam Prep | -- | --|
+| 12 | Fri 04/19 | None | 34. Software Engineering II | -- | -- | Proj 3A: BYOW Phase 1 |
+| 13 | Mon 04/22 | Algs 702-718 | 35. Radix Sorts | More Sorting | Interactivity in Project 3 | -- |
+| 13 | Wed 04/24 | None | 36. Sorting and Data Structures Conclusion | Sorting Exam Prep | -- | -- |
+| 13 | Fru 04/26 | None | 37. Software Engineering III | -- | -- | -- |
+| 14 | Mon 04/29 | None | 38. Compression | Goodbye, Fun | BYOW Demos | Proj 3B: BYOW Phase 2 |
+| 14 | Wed 05/01 | None | 39. Compression, Complexity, and P = NP? | -- | -- | -- |
+| 14 | Fri 05/03 | None | 40. Summary, Fun | -- | -- | -- |
