@@ -6,8 +6,7 @@ This repository contains the progress of UC Berkeley CS61B course materials that
 
 All course materials are based on the [Spring 2019](https://sp19.datastructur.es/) course.
 
-Lecture notes are written in .ipynb files, which can be opened via Jupyter Notebook or Jupyter Lab. Since this class mainly uses Java, installation of a Java kernel (I used [IJava](https://github.com/SpencerPark/IJava)) is required to execute the cells within the notebooks.
-
+Lecture notes are written in .ipynb files, which can be opened via Jupyter Notebook or Jupyter Lab. Since this class mainly uses Java, installation of Java kernel (I used [IJava](https://github.com/SpencerPark/IJava)) is required to execute the cells containing Java code.
 
 | Symbol | Meaning |
 | --- | --- |
@@ -27,10 +26,10 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 3 | Wed 02/06 | 3.1, Optional: [TDD is Dead](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html) <br> [Unit Tests are Waste](http://www.rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf) <br> [Response](http://henrikwarne.com/2014/09/04/a-response-to-why-most-unit-testing-is-waste/) | 7. Testing :heavy_check_mark: :trophy: | Linked Lists, Arrays Exam Prep | -- |
 | 3 | Fri 02/08 | 4.1 | 8. Inheritance, Implements :heavy_check_mark: :warning: | --- | --- | --- |
 | 4 | Mon 02/11 | 4.2 | 9. Extends, Casting, Higher Order Functions :heavy_check_mark: | Inheritance :heavy_check_mark: | Peer Code Review | Project 1B: Testing and HoFs :heavy_check_mark: |
-| 4 | Wed 02/13 | 4.3 | 10. Subtype Polymorphism vs. HoFs :heavy_check_mark: | Inheritance Exam Prep | --- | Project 1 Gold: Autograding :heavy_check_mark: | 
+| 4 | Wed 02/13 | 4.3 | 10. Subtype Polymorphism vs. HoFs :heavy_check_mark: (No Guide Exercises) | Inheritance Exam Prep | --- | Project 1 Gold: Autograding :heavy_check_mark: | 
 | 4 | Fri 02/15 | 6.1, 6.2, 6.3, 6.4 | 11. Exceptions, Iterators, Object Methods :heavy_check_mark: | --- | --- | --- | 
 | 5 | Wed 02/20 | -- | 12. Coding in the Real World, Review | Iterators, Iterables :heavy_check_mark: | HugLife :heavy_check_mark: | Midterm 1 |
-| 5 | Fri 02/22 | 8.1, 8.2, Algs 170-198 | 13. Asymptotics I :heavy_check_mark: | Exceptions, Iterators, Iterables Exam Prep | -- | HW1: Java Syntax and Sound Synthesis :heavy_check_mark: |
+| 5 | Fri 02/22 | 8.1, 8.2, Algs 170-198 | 13. Asymptotics I :heavy_check_mark: :trophy: | Exceptions, Iterators, Iterables Exam Prep | -- | HW1: Java Syntax and Sound Synthesis :heavy_check_mark: |
 | 6 | Mon 02/25 | 9.1, 9.2, 9.3, 9.4, 9.5, Algs 216-233 | 14. Disjoint Sets :heavy_check_mark: | Disjoint Sets and Asymptotics :heavy_check_mark: | Disjoint Sets :heavy_check_mark: | --- |
 | 6 | Wed 02/27 | 8.3, 8.4, Algs 170-198 | 15. Asymptotics II :heavy_check_mark: | Disjoint Sets and Asymptotics Exam Prep | Challenge Disjoint Sets | --- |
 | 6 | Fri 03/01 | 10.1, 10.2, Algs 396 - 406 | 16. ADTs, Sets, Maps, BSTs :heavy_check_mark: | --- | --- | HW2: Percolation |
