@@ -1,12 +1,9 @@
-# CS61B Spring 2019 Progress Tracker
+# CS61B Progress Tracker
 
-This repository contains my progress UC Berkeley CS61B - Data Structures. 
-
-## Progress Table
-
-All course materials are based on the [Spring 2019](https://sp19.datastructur.es/) course.
+This repository contains my progress UC Berkeley CS61B - Data Structures and course materials based on [Fall 2018](https://inst.eecs.berkeley.edu/~cs61b/fa18/) and [Spring 2019](https://sp19.datastructur.es/) semester. 
 
 Lecture notes are written in .ipynb files, which can be opened via Jupyter Notebook or Jupyter Lab. Since this class mainly uses Java, installation of Java kernel (I used [IJava](https://github.com/SpencerPark/IJava)) is required to execute the cells containing Java code.
+
 
 | Symbol             | Meaning                          |
 | ------------------ | -------------------------------- |
@@ -15,6 +12,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | :trophy:           | Study Guide Exercises Completed  |
 | :warning:          | Study Guide Exercises Incomplete |
 
+# Spring 2019 Progress Tracker
 
 ## Week 1
 
@@ -195,3 +193,16 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
   | Fri 05/03 | None    | 40. Summary, Fun                         | --           | --         | --                    |
 
 </details>
+
+## Fall 2018
+
+| Week | Discussion | Lab | Assignments |
+| --- | --- | --- | --- |
+| 1 | --- | javac, java, git | HW0: A Few Java Exercises |
+| 2 | Intro to Java | IntelliJ and IntLists | HW1: JUnit Testing, Basic Syntax, and Linked Lists <br> Project 0: Galaxies |
+| 3 | Pointers | IntDLists and Debugging | --- |
+| 4 | More Objects and Arrays | Mostly Proj 0 | Project 1: The Enigma <br> HW2: Arrays and Lists of Lists |
+| 5 | Inheritance | Collections, Iterators, and Iterables | HW3: OOP, Interfaces, and Inheritance |
+| 6 | Test Review | --- | --- |
+| 7 | Bits and Algorithmic Analysis | Asymptotic Analysis | HW4: Scanners and Patterns |
+| 8 | More Algorithmic Analysis | Project 1 Workday | Project 2: Amazons <br> Project 2 milestone <br> HW5: Bit Operations, BSTs, and Asymptotic Analysis |
