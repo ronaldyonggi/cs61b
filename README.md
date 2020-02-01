@@ -198,8 +198,8 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 
 | Week | Discussion | Lab | Assignments |
 | --- | --- | --- | --- |
-| 1 | --- | javac, java, git | HW0: A Few Java Exercises |
-| 2 | Intro to Java | IntelliJ and IntLists | HW1: JUnit Testing, Basic Syntax, and Linked Lists <br> Project 0: Galaxies |
+| 1 | --- | javac, java, git :heavy_check_mark: | HW0: A Few Java Exercises :heavy_check_mark: |
+| 2 | Intro to Java | IntelliJ and IntLists :heavy_check_mark: | HW1: JUnit Testing, Basic Syntax, and Linked Lists :heavy_check_mark: <br> Project 0: Galaxies |
 | 3 | Pointers | IntDLists and Debugging | --- |
 | 4 | More Objects and Arrays | Mostly Proj 0 | Project 1: The Enigma <br> HW2: Arrays and Lists of Lists |
 | 5 | Inheritance | Collections, Iterators, and Iterables | HW3: OOP, Interfaces, and Inheritance |
