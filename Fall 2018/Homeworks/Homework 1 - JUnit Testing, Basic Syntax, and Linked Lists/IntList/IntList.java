@@ -33,7 +33,6 @@ public class IntList {
        YOU GET TO THE PROBLEMS YOU NEED TO SOLVE. Search for '2a'
        and you'll be where you need to go. */
 
-
     /**
      * Returns a new IntList containing the ints in ARGS.
      */
@@ -146,8 +145,6 @@ public class IntList {
     /* DO NOT MODIFY ANYTHING ABOVE THIS LINE! */
 
 
-    /* 2a. */
-
     /**
      * Returns a list consisting of the elements of A followed by the
      * elements of B.  May modify items of A. Don't use 'new'.
@@ -170,8 +167,6 @@ public class IntList {
             return A;
         }
     }
-
-    /* 2b. */
 
     /**
      * Returns a list consisting of the elements of L starting from
@@ -211,8 +206,6 @@ public class IntList {
          */
     }
 
-    /* 2c. */
-
     /**
      * Returns the sublist consisting of LEN items from list L,
      * beginning with item #START (where the first item is #0).
@@ -244,8 +237,6 @@ public class IntList {
             return sublist(L.tail, start-1, len);
         }
     }
-
-    /* 2d. */
 
     /**
      * Returns the sublist consisting of LEN items from list L,
@@ -312,22 +303,3 @@ public class IntList {
          */
     }
 }
-
-
-        /*if (L == null | len <= 0) {
-            return null;
-        }
-        for (int i = 0; i < start; i++) {
-            if (L.tail != null) {
-                L.head = L.tail.head;
-                L.tail = L.tail.tail;
-            }
-            return null;
-        }
-        //IntList head = L;
-        //for (int x = 0; x < len - 1 && L.tail != null; x++, L = L.tail) {
-        //  L.tail = null;
-        //}
-        return L;
-    }
-    */
