@@ -33,8 +33,8 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
   | Lecture                                                       | Study Guide                                                        | Discussion                             | Lab                                 | Assignments / Exams |
   | ------------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------- | ----------------------------------- | ------------------- |
   | 3. References, Recursion, and Lists :heavy_check_mark:        | :heavy_check_mark: Scope, Pass-by-Value, Static :heavy_check_mark: | IntelliJ Home Setup :heavy_check_mark: | Project 0: NBody :heavy_check_mark: |
-  | 4. SLLists, Nested Classes, Sentinel Nodes :heavy_check_mark: | :white_check_mark: :warning: A Level problem 2 skipped :warning:   | Scope, Pass-by-Value, Static Exam Prep | IDEs :heavy_check_mark:             | ---                 |
-  | 5. DLLists, Arrays :heavy_check_mark:                         | :white_check_mark: :warning: A Level incomplete :warning:          | ---                                    | ---                                 | ---                 |
+  | 4. SLLists, Nested Classes, Sentinel Nodes :heavy_check_mark: | :white_check_mark: :warning: A Level problem 2 skipped   | Scope, Pass-by-Value, Static Exam Prep | IDEs :heavy_check_mark:             | ---                 |
+  | 5. DLLists, Arrays :heavy_check_mark:                         | :white_check_mark: :warning: A Level incomplete          | ---                                    | ---                                 | ---                 |
 
 </details>
 
@@ -47,7 +47,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
    | ------------------------------------------------------- | ------------------ | --------------------------------------- | ------------------------------------- | ---------------------------------------------- |
    | 6. ALists, Resizing, vs. SLists :heavy_check_mark:      | :heavy_check_mark: | Linked Lists, Arrays :heavy_check_mark: | Testing, Debugging :heavy_check_mark: | Project 1A: Data Structures :heavy_check_mark: |
    | 7. Testing :heavy_check_mark:                           | :heavy_check_mark: | Linked Lists, Arrays Exam Prep          | --                                    |
-   | 8. Inheritance, Implements :heavy_check_mark: :warning: | :white_check_mark: | ---                                     | ---                                   | ---                                            |
+   | 8. Inheritance, Implements :heavy_check_mark: | :white_check_mark: | ---                                     | ---                                   | ---                                            |
 
 </details>
 
@@ -193,7 +193,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 
 </details>
 
-## Fall 2018
+# Fall 2018 Progress
 
 | Week | Discussion                                 | Lab                                        | Assignments                                                                                         |
 | ---- | ------------------------------------------ | ------------------------------------------ | --------------------------------------------------------------------------------------------------- |
