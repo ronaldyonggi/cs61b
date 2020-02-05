@@ -33,8 +33,8 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
   | Lecture                                                       | Study Guide                                                        | Discussion                             | Lab                                 | Assignments / Exams |
   | ------------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------- | ----------------------------------- | ------------------- |
   | 3. References, Recursion, and Lists :heavy_check_mark:        | :heavy_check_mark: Scope, Pass-by-Value, Static :heavy_check_mark: | IntelliJ Home Setup :heavy_check_mark: | Project 0: NBody :heavy_check_mark: |
-  | 4. SLLists, Nested Classes, Sentinel Nodes :heavy_check_mark: | :white_check_mark: :warning: A Level problem 2 skipped   | Scope, Pass-by-Value, Static Exam Prep | IDEs :heavy_check_mark:             | ---                 |
-  | 5. DLLists, Arrays :heavy_check_mark:                         | :white_check_mark: :warning: A Level incomplete          | ---                                    | ---                                 | ---                 |
+  | 4. SLLists, Nested Classes, Sentinel Nodes :heavy_check_mark: | :white_check_mark: :warning: A Level problem 2 skipped             | Scope, Pass-by-Value, Static Exam Prep | IDEs :heavy_check_mark:             | ---                 |
+  | 5. DLLists, Arrays :heavy_check_mark:                         | :white_check_mark: :warning: A Level incomplete                    | ---                                    | ---                                 | ---                 |
 
 </details>
 
@@ -43,11 +43,11 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 <details>
   <summary> Week 3 Progress </summary>
 
-   | Lecture                                                 | Study Guide        | Discussion                              | Lab                                   | Assignments / Exams                            |
-   | ------------------------------------------------------- | ------------------ | --------------------------------------- | ------------------------------------- | ---------------------------------------------- |
-   | 6. ALists, Resizing, vs. SLists :heavy_check_mark:      | :heavy_check_mark: | Linked Lists, Arrays :heavy_check_mark: | Testing, Debugging :heavy_check_mark: | Project 1A: Data Structures :heavy_check_mark: |
-   | 7. Testing :heavy_check_mark:                           | :heavy_check_mark: | Linked Lists, Arrays Exam Prep          | --                                    |
-   | 8. Inheritance, Implements :heavy_check_mark: | :white_check_mark: | ---                                     | ---                                   | ---                                            |
+   | Lecture                                            | Study Guide        | Discussion                              | Lab                                   | Assignments / Exams                            |
+   | -------------------------------------------------- | ------------------ | --------------------------------------- | ------------------------------------- | ---------------------------------------------- |
+   | 6. ALists, Resizing, vs. SLists :heavy_check_mark: | :heavy_check_mark: | Linked Lists, Arrays :heavy_check_mark: | Testing, Debugging :heavy_check_mark: | Project 1A: Data Structures :heavy_check_mark: |
+   | 7. Testing :heavy_check_mark:                      | :heavy_check_mark: | Linked Lists, Arrays Exam Prep          | --                                    |
+   | 8. Inheritance, Implements :heavy_check_mark:      | :white_check_mark: | ---                                     | ---                                   | ---                                            |
 
 </details>
 
@@ -195,13 +195,13 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 
 # Fall 2018 Progress
 
-| Week | Discussion                                 | Lab                                        | Assignments                                                                                         |
-| ---- | ------------------------------------------ | ------------------------------------------ | --------------------------------------------------------------------------------------------------- |
-| 1    | ---                                        | javac, java, git :heavy_check_mark:        | HW0: A Few Java Exercises :heavy_check_mark:                                                        |
-| 2    | Intro to Java                              | IntelliJ and IntLists :heavy_check_mark:   | HW1: JUnit Testing, Basic Syntax, and Linked Lists :heavy_check_mark: <br> Project 0: Galaxies      |
-| 3    | Pointers :heavy_check_mark:                | IntDLists and Debugging :heavy_check_mark: | ---                                                                                                 |
-| 4    | More Objects and Arrays :heavy_check_mark: | Mostly Proj 0                              | Project 1: The Enigma <br> HW2: Arrays and Lists of Lists                                           |
-| 5    | Inheritance                                | Collections, Iterators, and Iterables      | HW3: OOP, Interfaces, and Inheritance                                                               |
-| 6    | Test Review                                | ---                                        | ---                                                                                                 |
-| 7    | Bits and Algorithmic Analysis              | Asymptotic Analysis                        | HW4: Scanners and Patterns                                                                          |
-| 8    | More Algorithmic Analysis                  | Project 1 Workday                          | Project 2: Amazons <br> Project 2 milestone <br> HW5: Bit Operations, BSTs, and Asymptotic Analysis |
+| Week | Discussion                                                         | Lab                                        | Assignments                                                                                                  |
+| ---- | ------------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| 1    | ---                                                                | javac, java, git :heavy_check_mark:        | HW0: A Few Java Exercises :heavy_check_mark:                                                                 |
+| 2    | Intro to Java                                                      | IntelliJ and IntLists :heavy_check_mark:   | HW1: JUnit Testing, Basic Syntax, and Linked Lists :heavy_check_mark: <br> Project 0: Galaxies               |
+| 3    | Pointers :white_check_mark: :warning: (Skipped reverseDestructive) | IntDLists and Debugging :heavy_check_mark: | ---                                                                                                          |
+| 4    | More Objects and Arrays :heavy_check_mark:                         | Mostly Proj 0                              | Project 1: The Enigma <br> HW2: Arrays and Lists of Lists :white_check_mark: :warning: All but Array Warm Up |
+| 5    | Inheritance :heavy_check_mark:                                     | Collections, Iterators, and Iterables      | HW3: OOP, Interfaces, and Inheritance                                                                        |
+| 6    | Test Review                                                        | ---                                        | ---                                                                                                          |
+| 7    | Bits and Algorithmic Analysis                                      | Asymptotic Analysis                        | HW4: Scanners and Patterns                                                                                   |
+| 8    | More Algorithmic Analysis                                          | Project 1 Workday                          | Project 2: Amazons <br> Project 2 milestone <br> HW5: Bit Operations, BSTs, and Asymptotic Analysis          |
