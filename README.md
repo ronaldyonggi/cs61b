@@ -94,11 +94,11 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 <details>
   <summary> Week 7 Progress </summary>
 
-  | Lecture                                | Study Guide | Discussion                               | Lab                                      | Assignments / Exams |
-  | -------------------------------------- | ----------- | ---------------------------------------- | ---------------------------------------- | ------------------- |
-  | 17. B-Trees (2-3, 2-3-4 Trees)         |             | More Asymptotics, Search Trees           | TreeMap                                  | --                  |
-  | 18. Red Black Trees :heavy_check_mark: |             | More Asymptotics, Search Trees Exam Prep | Challenge Binary Search Tree Performance | HW3: Hashing        |
-  | 19. Hashing :heavy_check_mark:         |             | ---                                      | ---                                      | ---                 |
+  | Lecture                                | Study Guide | Discussion                               | Lab                                                                                     | Assignments / Exams |
+  | -------------------------------------- | ----------- | ---------------------------------------- | --------------------------------------------------------------------------------------- | ------------------- |
+  | 17. B-Trees (2-3, 2-3-4 Trees)         |             | More Asymptotics, Search Trees           | TreeMap :white_check_mark: :warning: Optional Exercises & Optional Asymptotics Problems | --                  |
+  | 18. Red Black Trees :heavy_check_mark: |             | More Asymptotics, Search Trees Exam Prep | Challenge Binary Search Tree Performance                                                | HW3: Hashing        |
+  | 19. Hashing :heavy_check_mark:         |             | ---                                      | ---                                                                                     | ---                 |
 
 </details>
 
@@ -109,7 +109,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 
   | Lecture                                                            | Study Guide | Discussion                      | Lab                        | Assignments / Exams           |
   | ------------------------------------------------------------------ | ----------- | ------------------------------- | -------------------------- | ----------------------------- |
-  | 20. Heaps and PQs :heavy_check_mark:                               |             | LLRBs, Hashing, Heaps           | HashMap                    | ---                           |
+  | 20. Heaps and PQs :heavy_check_mark:                               |             | LLRBs, Hashing, Heaps           | HashMap :heavy_check_mark:                    | ---                           |
   | 21. Prefix Operations and Tries :heavy_check_mark:                 |             | LLRBs, Hashing, Heaps Exam Prep | Challenge Heaps and Hashes | Proj 2: HeapPQ/KD-Tree HeapPQ |
   | 22. Range, Searching and Multi-Dimensional Data :heavy_check_mark: |             | ---                             | ---                        | ---                           |
 
@@ -195,13 +195,13 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 
 # Fall 2018 Progress
 
-| Week | Discussion                                                         | Lab                                        | Assignments                                                                                                  |
-| ---- | ------------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| 1    | ---                                                                | javac, java, git :heavy_check_mark:        | HW0: A Few Java Exercises :heavy_check_mark:                                                                 |
-| 2    | Intro to Java                                                      | IntelliJ and IntLists :heavy_check_mark:   | HW1: JUnit Testing, Basic Syntax, and Linked Lists :heavy_check_mark: <br> Project 0: Galaxies               |
-| 3    | Pointers :white_check_mark: :warning: (Skipped reverseDestructive) | IntDLists and Debugging :heavy_check_mark: | ---                                                                                                          |
-| 4    | More Objects and Arrays :heavy_check_mark:                         | Mostly Proj 0                              | Project 1: The Enigma <br> HW2: Arrays and Lists of Lists :white_check_mark: :warning: All but Array Warm Up |
-| 5    | Inheritance :heavy_check_mark:                                     | Collections, Iterators, and Iterables      | HW3: OOP, Interfaces, and Inheritance                                                                        |
-| 6    | Test Review                                                        | ---                                        | ---                                                                                                          |
-| 7    | Bits and Algorithmic Analysis                                      | Asymptotic Analysis                        | HW4: Scanners and Patterns                                                                                   |
-| 8    | More Algorithmic Analysis                                          | Project 1 Workday                          | Project 2: Amazons <br> Project 2 milestone <br> HW5: Bit Operations, BSTs, and Asymptotic Analysis          |
+| Week | Discussion                                                                      | Lab                                                                                              | Assignments                                                                                                  |
+| ---- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| 1    | ---                                                                             | javac, java, git :heavy_check_mark:                                                              | HW0: A Few Java Exercises :heavy_check_mark:                                                                 |
+| 2    | Intro to Java                                                                   | IntelliJ and IntLists :heavy_check_mark:                                                         | HW1: JUnit Testing, Basic Syntax, and Linked Lists :heavy_check_mark: <br> Project 0: Galaxies               |
+| 3    | Pointers :white_check_mark: :warning: (Skipped reverseDestructive)              | IntDLists and Debugging :heavy_check_mark:                                                       | ---                                                                                                          |
+| 4    | More Objects and Arrays :heavy_check_mark:                                      | Mostly Proj 0                                                                                    | Project 1: The Enigma <br> HW2: Arrays and Lists of Lists :white_check_mark: :warning: All but Array Warm Up |
+| 5    | Inheritance :heavy_check_mark:                                                  | Collections, Iterators, and Iterables :white_check_mark: :warning: (Skipped Optional Assigments) | HW3: OOP, Interfaces, and Inheritance                                                                        |
+| 6    | Test Review                                                                     | ---                                                                                              | ---                                                                                                          |
+| 7    | Bits and Algorithmic Analysis :white_check_mark: :warning: A bit with some bits | Asymptotic Analysis                                                                              | HW4: Scanners and Patterns                                                                                   |
+| 8    | More Algorithmic Analysis                                                       | Project 1 Workday                                                                                | Project 2: Amazons <br> Project 2 milestone <br> HW5: Bit Operations, BSTs, and Asymptotic Analysis          |
