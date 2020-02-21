@@ -45,6 +45,10 @@ public class TestComplexOomage {
          * is to obtain a parameter that results in a number that's outside the limit,
          * which can be obtained by having so many parameters for ComplexOomage.
          *
+         *
+         * Note that we can't simply use a single huge number for params, since
+         * the ComplexOomage validate() method restricts the input to integers only
+         * between 0 to 255. This is why I resorted to using so many params.
          */
         List<Oomage> deadlyList = new ArrayList<>();
 
