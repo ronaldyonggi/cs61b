@@ -94,11 +94,11 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 <details>
   <summary> Week 7 Progress </summary>
 
-  | Lecture                                | Study Guide | Discussion                               | Lab                                                                                     | Assignments / Exams |
-  | -------------------------------------- | ----------- | ---------------------------------------- | --------------------------------------------------------------------------------------- | ------------------- |
-  | 17. B-Trees (2-3, 2-3-4 Trees)         |             | More Asymptotics, Search Trees :white_check_mark: :warning: Last Problem           | TreeMap :white_check_mark: :warning: Optional Exercises & Optional Asymptotics Problems | --                  |
-  | 18. Red Black Trees :heavy_check_mark: |             | More Asymptotics, Search Trees Exam Prep | Challenge Binary Search Tree Performance                                                | HW3: Hashing :heavy_check_mark:        |
-  | 19. Hashing :heavy_check_mark:         |             | ---                                      | ---                                                                                     | ---                 |
+  | Lecture                                | Study Guide | Discussion                                                               | Lab                                                                                     | Assignments / Exams             |
+  | -------------------------------------- | ----------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ------------------------------- |
+  | 17. B-Trees (2-3, 2-3-4 Trees)         |             | More Asymptotics, Search Trees :white_check_mark: :warning: Last Problem | TreeMap :white_check_mark: :warning: Optional Exercises & Optional Asymptotics Problems | --                              |
+  | 18. Red Black Trees :heavy_check_mark: |             | More Asymptotics, Search Trees Exam Prep                                 | Challenge Binary Search Tree Performance                                                | HW3: Hashing :heavy_check_mark: |
+  | 19. Hashing :heavy_check_mark:         |             | ---                                                                      | ---                                                                                     | ---                             |
 
 </details>
 
@@ -107,11 +107,11 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 <details>
   <summary> Week 8 Progress </summary>
 
-  | Lecture                                                            | Study Guide | Discussion                      | Lab                        | Assignments / Exams           |
-  | ------------------------------------------------------------------ | ----------- | ------------------------------- | -------------------------- | ----------------------------- |
-  | 20. Heaps and PQs :heavy_check_mark:                               |             | LLRBs, Hashing, Heaps           | HashMap :heavy_check_mark:                    | ---                           |
-  | 21. Prefix Operations and Tries :heavy_check_mark:                 |             | LLRBs, Hashing, Heaps Exam Prep | Challenge Heaps and Hashes | Proj 2: HeapPQ/KD-Tree HeapPQ |
-  | 22. Range, Searching and Multi-Dimensional Data :heavy_check_mark: |             | ---                             | ---                        | ---                           |
+  | Lecture                                                            | Study Guide | Discussion                                                           | Lab                        | Assignments / Exams           |
+  | ------------------------------------------------------------------ | ----------- | -------------------------------------------------------------------- | -------------------------- | ----------------------------- |
+  | 20. Heaps and PQs :heavy_check_mark:                               |             | LLRBs, Hashing, Heaps :white_check_mark: :warning: 1, 2 - Extra, 3.2 | HashMap :heavy_check_mark: | ---                           |
+  | 21. Prefix Operations and Tries :heavy_check_mark:                 |             | LLRBs, Hashing, Heaps Exam Prep                                      | Challenge Heaps and Hashes | Proj 2: HeapPQ/KD-Tree HeapPQ |
+  | 22. Range, Searching and Multi-Dimensional Data :heavy_check_mark: |             | ---                                                                  | ---                        | ---                           |
 
 </details>
 
@@ -205,3 +205,10 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 6    | Test Review                                                                     | ---                                                                                              | ---                                                                                                          |
 | 7    | Bits and Algorithmic Analysis :white_check_mark: :warning: A bit with some bits | Asymptotic Analysis                                                                              | HW4: Scanners and Patterns                                                                                   |
 | 8    | More Algorithmic Analysis                                                       | Project 1 Workday                                                                                | Project 2: Amazons <br> Project 2 milestone <br> HW5: Bit Operations, BSTs, and Asymptotic Analysis          |
+| 9    | Binary Trees                                                                    | Heaps and Priority Queues :heavy_check_mark:                                                                        | ---                                                                                                          |
+| 10   | Heaps and Hashing                                                               | Debugging                                                                                        | HW6: Hashing and Ranges                                                                                      |
+| 11   | Sorting                                                                         | Testing Project                                                                                  | ---                                                                                                          |
+| 12   | Balanced Search                                                                 | Project Office Hours                                                                             | HW7: Sorting and Searching                                                                                   |
+| 13   | Graphs                                                                          | Graphs                                                                                           | Project 3: Fun with Graphs <br> Project 3 Milestone                                                          |
+| 14   | A* Search                                                                       | ---                                                                                              | HW8: Graphs                                                                                                  |
+| 15   | Fun and Review                                                                  | Proj 3 Workday                                                                                   | ---                                                                                                          |
