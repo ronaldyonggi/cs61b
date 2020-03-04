@@ -1,6 +1,6 @@
 # CS61B Progress Tracker
 
-This repository contains my progress UC Berkeley CS61B - Data Structures and course materials based on [Fall 2018](https://inst.eecs.berkeley.edu/~cs61b/fa18/) and [Spring 2019](https://sp19.datastructur.es/) semester. 
+My progress with UC Berkeley CS61B - Data Structures. Included materials based on [Fall 2018](https://inst.eecs.berkeley.edu/~cs61b/fa18/) and [Spring 2019](https://sp19.datastructur.es/) semesters. 
 
 Lecture notes are written in .ipynb files, which can be opened via Jupyter Notebook or Jupyter Lab. Since this class mainly uses Java, installation of Java kernel (I used [IJava](https://github.com/SpencerPark/IJava)) is required to execute the cells containing Java code.
 
@@ -11,7 +11,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | :white_check_mark: | Completed with skipped sections (not totally completed) |
 | :warning:          | Which section is incomplete / skipped                   |
 
-# Spring 2019 Progress Tracker
+# Spring 2019 Progress 
 
 ## Week 1
 
@@ -122,7 +122,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 
   | Lecture                                          | Study Guide | Discussion                                  | Lab              | Assignments / Exams |
   | ------------------------------------------------ | ----------- | ------------------------------------------- | ---------------- | ------------------- |
-  | 23. Tree and Graph Traversals :heavy_check_mark: |             | Tries, K-d Trees, Tree Traversals           | Tries            | ---                 |
+  | 23. Tree and Graph Traversals :heavy_check_mark: |             | Tries, K-d Trees, Tree Traversals           | Tries :heavy_check_mark:            | ---                 |
   | 24. Graph Traversals and Implementations         |             | Tries, K-d Trees, Tree Traversals Exam Prep | Challenge Graphs | ---                 |
   | 25. Shortest Paths                               |             | ---                                         | ---              | ---                 |
 
@@ -203,10 +203,10 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 | 4    | More Objects and Arrays :heavy_check_mark:                                      | Mostly Proj 0                                                                                    | Project 1: The Enigma <br> HW2: Arrays and Lists of Lists :white_check_mark: :warning: All but Array Warm Up |
 | 5    | Inheritance :heavy_check_mark:                                                  | Collections, Iterators, and Iterables :white_check_mark: :warning: (Skipped Optional Assigments) | HW3: OOP, Interfaces, and Inheritance                                                                        |
 | 6    | Test Review                                                                     | ---                                                                                              | ---                                                                                                          |
-| 7    | Bits and Algorithmic Analysis :white_check_mark: :warning: A bit with some bits | Asymptotic Analysis                                                                              | HW4: Scanners and Patterns                                                                                   |
-| 8    | More Algorithmic Analysis                                                       | Project 1 Workday                                                                                | Project 2: Amazons <br> Project 2 milestone <br> HW5: Bit Operations, BSTs, and Asymptotic Analysis          |
+| 7    | Bits and Algorithmic Analysis :white_check_mark: :warning: A bit with some bits | Asymptotic Analysis :heavy_check_mark:                                                                              | HW4: Scanners and Patterns                                                                                   |
+| 8    | More Algorithmic Analysis :white_check_mark: :warning: Big Ballin' Bounds                                                       | Project 1 Workday                                                                                | Project 2: Amazons <br> Project 2 milestone <br> HW5: Bit Operations, BSTs, and Asymptotic Analysis          |
 | 9    | Binary Trees                                                                    | Heaps and Priority Queues :heavy_check_mark:                                                                        | ---                                                                                                          |
-| 10   | Heaps and Hashing                                                               | Debugging                                                                                        | HW6: Hashing and Ranges                                                                                      |
+| 10   | Heaps and Hashing :heavy_check_mark:                                                               | Debugging                                                                                        | HW6: Hashing and Ranges                                                                                      |
 | 11   | Sorting                                                                         | Testing Project                                                                                  | ---                                                                                                          |
 | 12   | Balanced Search                                                                 | Project Office Hours                                                                             | HW7: Sorting and Searching                                                                                   |
 | 13   | Graphs                                                                          | Graphs                                                                                           | Project 3: Fun with Graphs <br> Project 3 Milestone                                                          |
