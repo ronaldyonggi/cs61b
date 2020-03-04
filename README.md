@@ -96,7 +96,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 
   | Lecture                                | Study Guide | Discussion                                                               | Lab                                                                                     | Assignments / Exams             |
   | -------------------------------------- | ----------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | ------------------------------- |
-  | 17. B-Trees (2-3, 2-3-4 Trees)         |             | More Asymptotics, Search Trees :white_check_mark: :warning: Last Problem | TreeMap :white_check_mark: :warning: Optional Exercises & Optional Asymptotics Problems | --                              |
+  | 17. B-Trees (2-3, 2-3-4 Trees)         |             | More Asymptotics, Search Trees :heavy_check_mark: | TreeMap :white_check_mark: :warning: Optional Exercises & Optional Asymptotics Problems | --                              |
   | 18. Red Black Trees :heavy_check_mark: |             | More Asymptotics, Search Trees Exam Prep                                 | Challenge Binary Search Tree Performance                                                | HW3: Hashing :heavy_check_mark: |
   | 19. Hashing :heavy_check_mark:         |             | ---                                                                      | ---                                                                                     | ---                             |
 
