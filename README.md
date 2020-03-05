@@ -109,7 +109,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
 
   | Lecture                                                            | Study Guide | Discussion                                                           | Lab                        | Assignments / Exams           |
   | ------------------------------------------------------------------ | ----------- | -------------------------------------------------------------------- | -------------------------- | ----------------------------- |
-  | 20. Heaps and PQs :heavy_check_mark:                               |             | LLRBs, Hashing, Heaps :white_check_mark: :warning: 1, 2 - Extra, 3.2 | HashMap :heavy_check_mark: | ---                           |
+  | 20. Heaps and PQs :heavy_check_mark:                               |             | LLRBs, Hashing, Heaps :heavy_check_mark: | HashMap :heavy_check_mark: | ---                           |
   | 21. Prefix Operations and Tries :heavy_check_mark:                 |             | LLRBs, Hashing, Heaps Exam Prep                                      | Challenge Heaps and Hashes | Proj 2: HeapPQ/KD-Tree HeapPQ |
   | 22. Range, Searching and Multi-Dimensional Data :heavy_check_mark: |             | ---                                                                  | ---                        | ---                           |
 
