@@ -85,7 +85,7 @@ Lecture notes are written in .ipynb files, which can be opened via Jupyter Noteb
   | --------------------------------------------- | ----------- | ------------------------------------------------ | -------------------------------- | ------------------- |
   | 14. Disjoint Sets :heavy_check_mark:          |             | Disjoint Sets and Asymptotics :heavy_check_mark: | Disjoint Sets :heavy_check_mark: | ---                 |
   | 15. Asymptotics II :heavy_check_mark:         |             | Disjoint Sets and Asymptotics Exam Prep          | Challenge Disjoint Sets          | ---                 |
-  | 16. ADTs, Sets, Maps, BSTs :heavy_check_mark: |             | ---                                              | ---                              | HW2: Percolation    |
+  | 16. ADTs, Sets, Maps, BSTs :heavy_check_mark: |             | ---                                              | ---                              | HW2: Percolation :heavy_check_mark:    |
 
 </details>
 
