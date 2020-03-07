@@ -16,12 +16,23 @@ public class PercolationStats {
      */
     private double[] results;
 
+    /** repeatTimes is T.
+     */
+    private int repeatTimes;
+
     /** numOpen keeps track of the number of open sites.
      *
      */
 
 
+    /** PercolationStats constructor.
+     *
+     * @param N size of the grid
+     * @param T number of times computation is repeated
+     * @param pf a PercolationFactory instance
+     */
     public PercolationStats(int N, int T, PercolationFactory pf){
+        repeatTimes = T;
         if (N <= 0 || T <= 0) throw new IllegalArgumentException();
         /** Recall that the results is an array of size T.
          *
@@ -69,19 +80,26 @@ public class PercolationStats {
 
     }
 
+    /** Calculate the mean, or in the problem statement,
+     * the mu (greek letter).
+     */
     public double mean(){
-
+        return StdStats.mean(results);
     }
 
+    /** Calculate the standard deviation, or in the problem statement,
+     * the sigma (greek letter).
+     */
     public double stddev(){
+        return StdStats.stddev(results);
 
     }
 
     public double confidenceLow(){
-
+        return mean() - ((1.96 * stddev()) / Math.sqrt(repeatTimes));
     }
 
     public double confidenceHigh(){
-
+        return mean() + ((1.96 * stddev()) / Math.sqrt(repeatTimes));
     }
 }
