@@ -102,4 +102,19 @@ public class PercolationStats {
     public double confidenceHigh(){
         return mean() + ((1.96 * stddev()) / Math.sqrt(repeatTimes));
     }
+
+    /** Main method. Not required but useful to
+     * check and see the results.
+     */
+    public static void main(String[] args){
+        PercolationStats p = new PercolationStats(20, 20, new PercolationFactory());
+        String mean = "The mean is: ";
+        System.out.println(mean + p.mean());
+        String stddev = "The standard deviation is: ";
+        System.out.println(stddev + p.stddev());
+        String low = "The lower interval of the 95% confidence interval is: ";
+        System.out.println(low + p.confidenceLow());
+        String high = "The higher interval of the 95% confidence interval is: ";
+        System.out.println(high + p.confidenceHigh());
+    }
 }
