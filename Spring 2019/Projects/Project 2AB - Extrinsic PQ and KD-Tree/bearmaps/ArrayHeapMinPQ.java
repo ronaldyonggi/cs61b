@@ -58,6 +58,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public T getSmallest(){
+        return items.get(0).getItem();
     }
 
     @Override
@@ -144,6 +145,11 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         else return index2;
     }
 
+    private int min(int index1, int index2) {
+        if (max(index1, index2) == index1) return index2;
+        else return index1;
+    }
+
     private void swimUp(int index) {
         /** Notice that we have the 'getParent' method and 'swap' method
          * at our disposal. Simply use these methods to swap between the
@@ -153,11 +159,11 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     }
 
     private void swimDown(int index){
-        swap(index, max(getLeftChild(index), getRightChild(index)));
+        swap(index, min(getLeftChild(index), getRightChild(index)));
     }
 
     private void continuousSwimUp(int index){
-        while ((!isRoot(index)) && parentLessPriority(index)) {
+        while ((!isRoot(index)) && parentMorePriority(index)) {
             swimUp(index);
             index = getParent(index);
         }
