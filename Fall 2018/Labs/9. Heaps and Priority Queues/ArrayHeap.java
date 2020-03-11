@@ -399,17 +399,13 @@ public class ArrayHeap<T> {
         }
     }
 
-    /** Helper method to check whether a node has only left child.
+    /** Helper method to check whether whether a node has only one (left) child.
+     * Simply check whether a node has a right child.
      */
-    private boolean hasOnlyLeftChild(int index){
-        int leftChildIndex = getLeftOf(index);
+    private boolean hasOnlyOneChild(int index){
         int rightChildIndex = getRightOf(index);
-        Node leftChildNode = getNode(leftChildIndex);
         Node rightChildNode = getNode(rightChildIndex);
-        /** Returns true if the left child is not null and the right child is null.
-         * Returns false otherwise.
-         */
-        return (leftChildNode != null && rightChildNode == null);
+        return rightChildNode == null;
     }
 
     /** Returns the index of the node with greater priority. Precondition: not
