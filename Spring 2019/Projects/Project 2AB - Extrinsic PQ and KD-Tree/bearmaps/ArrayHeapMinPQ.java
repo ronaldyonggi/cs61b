@@ -120,13 +120,13 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         return (leftChildNode == null && rightChildNode == null);
     }
 
-    private boolean parentLessPriority(int index){
+    private boolean parentMorePriority(int index){
         double parentPriority = getNodeAtIndex(getParent(index)).getPriority();
         double currentPriority = getNodeAtIndex(index).getPriority();
         /** Returns true if the priority of the parent Node less than the priority
          * of the current node. Returns false otherwise.
          */
-        return parentPriority < currentPriority;
+        return parentPriority > currentPriority;
     }
 
     private int max(int index1, int index2) {
@@ -162,4 +162,5 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
             index = getParent(index);
         }
     }
+
 }
