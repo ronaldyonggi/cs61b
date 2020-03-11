@@ -78,6 +78,8 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     /** ==== Array Representation of the Heap ====
      *
      * Items indexing starts from 0.
+     *
+     * Methods below are adapted from Heaps and PQs Lab CS61B Fall 2018.
      */
 
     private int getLeftChild(int index){
@@ -88,7 +90,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         return (index * 2) + 2;
     }
 
-    private getParent(int index){
+    private int getParent(int index){
         return (index - 1) / 2;
     }
 
@@ -101,5 +103,63 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         Node node2 = getNodeAtIndex(index2);
         items.set(index1, node2);
         items.set(index2, node1);
+    }
+
+    private boolean isRoot(int index){
+        return getParent(index) == 0;
+    }
+
+    private boolean isLeaf(int index){
+        int leftChildIndex = getLeftChild(index);
+        int rightChildIndex = getRightChild(index);
+        Node leftChildNode = getNodeAtIndex(leftChildIndex);
+        Node rightChildNode = getNodeAtIndex(rightChildIndex);
+        /** Returns true if both right child and left child are null.
+         * False otherwise.
+         */
+        return (leftChildNode == null && rightChildNode == null);
+    }
+
+    private boolean parentLessPriority(int index){
+        double parentPriority = getNodeAtIndex(getParent(index)).getPriority();
+        double currentPriority = getNodeAtIndex(index).getPriority();
+        /** Returns true if the priority of the parent Node less than the priority
+         * of the current node. Returns false otherwise.
+         */
+        return parentPriority < currentPriority;
+    }
+
+    private int max(int index1, int index2) {
+        /** Obtain the priorities of both Nodes and compare them.
+         * Returns the index of the node whose priority is greater.
+         */
+        Node node1 = getNodeAtIndex(index1);
+        if (node1.equals(null)) return index2;
+        Node node2 = getNodeAtIndex(index2);
+        if (node2.equals(null)) return index1;
+        double prio1 = node1.getPriority();
+        double prio2 = node2.getPriority();
+
+        if (prio1 > prio2) return index1;
+        else return index2;
+    }
+
+    private void swimUp(int index) {
+        /** Notice that we have the 'getParent' method and 'swap' method
+         * at our disposal. Simply use these methods to swap between the
+         * node and its parent.
+         */
+        swap(index, getParent(index));
+    }
+
+    private void swimDown(int index){
+        swap(index, max(getLeftChild(index), getRightChild(index)));
+    }
+
+    private void continuousSwimUp(int index){
+        while ((!isRoot(index)) && parentLessPriority(index)) {
+            swimUp(index);
+            index = getParent(index);
+        }
     }
 }
