@@ -166,9 +166,11 @@ public class ArrayHeap<T> {
          * priority is lower.
          */
         Node node1 = getNode(index1);
-        if (node1.equals(null)) return index2;
+        if (node1 == null) return index2;
+//        if (node1.equals(null)) return index2;
         Node node2 = getNode(index2);
-        if (node2.equals(null)) return index1;
+        if (node2 == null) return index1;
+//        if (node2.equals(null)) return index1;
         double prio1 = node1.priority();
         double prio2 = node2.priority();
 
@@ -211,7 +213,7 @@ public class ArrayHeap<T> {
 
         /** If there's no right node, swap with left node.
          */
-        if (hasOnlyLeftChild(index)){
+        if (hasOnlyOneChild(index)){
             Node currentNode = getNode(index);
             Node leftChild = getNode(getLeftOf(index));
             /** Set the current Node = left child Node first. Then set the left child
@@ -219,17 +221,6 @@ public class ArrayHeap<T> {
              */
             setNode(index, leftChild);
             setLeft(index, currentNode);
-        }
-        /** If there's no left node, swap with right node.
-         */
-        else if (hasOnlyRightChild(index)) {
-            Node currentNode = getNode(index);
-            Node rightChild = getNode(getRightOf(index));
-            /** Set the current Node = right child Node first. Then set the right child
-             * = current Node.
-             */
-            setNode(index, rightChild);
-            setRight(index, currentNode);
         }
         else {
             /** If the node has 2 children, we choose the child with greater priority
@@ -302,14 +293,10 @@ public class ArrayHeap<T> {
         /** If the Node doesn't have any child, then we've arrived at the right node.
          */
         if (isLeaf(index)) return index;
-        /** If the left child is null, continue calling smallestPrioIndex
-         * on the node's right child.
-         */
-        else if (hasOnlyRightChild(index)) return smallestPrioIndex(getRightOf(index));
-        /** If the right child is null, continue calling smallestPrioIndex on
+        /** If the's only one child, continue calling smallestPrioIndex on
          * the node's left child.
          */
-        else if (hasOnlyLeftChild(index)) return smallestPrioIndex(getLeftOf(index));
+        else if (hasOnlyOneChild(index)) return smallestPrioIndex(getLeftOf(index));
         /**
          * Otherwise, there has to be 2 children! Return the smallest of the result of
          * calling smallestPrioIndex on both the left child and right child.
@@ -410,9 +397,14 @@ public class ArrayHeap<T> {
          * If one of the node is null, then simply return the other node.
          */
         Node node1 = getNode(index1);
-        if (node1.equals(null)) return index2;
+        if (node1 == null) return index2;
+//        if (node1.equals(null)) return index2;
         Node node2 = getNode(index2);
-        if (node2.equals(null)) return index1;
+        if (node2 == null) return index1;
+//        if (node2.equals(null)) return index1;
+        /** Remember that a null object doesn't have a .equals() method! Hence use '=='.
+         *
+         */
         double prio1 = node1.priority();
         double prio2 = node2.priority();
 
