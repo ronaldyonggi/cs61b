@@ -166,8 +166,8 @@ public class ArrayHeap<T> {
          * priority is lower.
          */
         Node node1 = getNode(index1);
-        Node node2 = getNode(index2);
         if (node1.equals(null)) return index2;
+        Node node2 = getNode(index2);
         if (node2.equals(null)) return index1;
         double prio1 = node1.priority();
         double prio2 = node2.priority();
@@ -295,8 +295,8 @@ public class ArrayHeap<T> {
      *
      */
 
-    /** Helper method that scans through the heap starting from node index and returns the
-     * index of the node with smallest priority.
+    /** Helper method that scans through the heap starting from input node and returns the
+     * index of the node with the smallest priority.
      */
     private int smallestPrioIndex(int index){
         /** If the Node doesn't have any child, then we've arrived at the right node.
@@ -341,8 +341,7 @@ public class ArrayHeap<T> {
     /** Helper method to check whether a node is a root.
      */
     private boolean isRoot(int index){
-        int parentIndex = getParentOf(index);
-        return parentIndex == 0;
+        return getParentOf(index) == 0;
     }
 
     /** Helper method to check whether a parent's priority is less than the
@@ -358,16 +357,17 @@ public class ArrayHeap<T> {
     }
 
     /** Helper method to check whether a node is a leaf (has no children).
+     * In a heap, it is not allowed to have a node with
+     * only a single right child. Either a node...
+     * 1. ...has no children (a leaf node)
+     * 2. ...has a single left children
+     * 3. ...has 2 children, left and right.
+     *
      */
     private boolean isLeaf(int index){
         int leftChildIndex = getLeftOf(index);
-        int rightChildIndex = getRightOf(index);
         Node leftChildNode = getNode(leftChildIndex);
-        Node rightChildNode = getNode(rightChildIndex);
-        /** Returns true if both right child and left child are null.
-         * Returns false otherwise.
-         */
-        return (leftChildNode == null && rightChildNode == null);
+        return leftChildNode == null;
     }
 
     /** Helper method that returns true if a node's child/children has a greater
@@ -410,19 +410,6 @@ public class ArrayHeap<T> {
          * Returns false otherwise.
          */
         return (leftChildNode != null && rightChildNode == null);
-    }
-
-    /** Helper method to check whether a node has only right child.
-     */
-    private boolean hasOnlyRightChild(int index){
-        int leftChildIndex = getLeftOf(index);
-        int rightChildIndex = getRightOf(index);
-        Node leftChildNode = getNode(leftChildIndex);
-        Node rightChildNode = getNode(rightChildIndex);
-        /** Returns true if the right child is not null and the left child is null.
-         * Otherwise returns false.
-         */
-        return (rightChildNode!= null && leftChildNode == null);
     }
 
     /** Returns the index of the node with greater priority. Precondition: not
