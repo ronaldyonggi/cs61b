@@ -370,28 +370,21 @@ public class ArrayHeap<T> {
         return leftChildNode == null;
     }
 
-    /** Helper method that returns true if a node's child/children has a greater
-     * priority than the current node's priority.
+    /** Helper method that returns true if exists a child that has greater
+     * priority than the node's priority. Otherwise returns false.
      */
     private boolean oneChildIsGreater(int index){
         double currentPrio = getNode(index).priority();
 
-        /** If the node has only left child, compare the priority of that
+        /** If the node has only one (left) child, compare the priority of the
          * left child with the current node's.
          */
-        if (hasOnlyLeftChild(index)){
+        if (hasOnlyOneChild(index)){
             double leftChildPrio = getNode(getLeftOf(index)).priority();
             return leftChildPrio > currentPrio;
         }
-        /** If the node has only right child, compare the priority of that
-         * left child with the current node's.
-         */
-        else if (hasOnlyRightChild(index)){
-            double rightChildPrio = getNode(getRightOf(index)).priority();
-            return rightChildPrio > currentPrio;
-        }
         /** Otherwise if there are 2 children, get the priority of the
-         * greatest of the 2 and compare it with the current node's.
+         * greatest of the 2 children and compare it with the current node's.
          */
         else {
             int greaterChildIndex = max(getLeftOf(index), getRightOf(index));
