@@ -406,10 +406,12 @@ public class ArrayHeap<T> {
     private int max(int index1, int index2) {
         /** Obtain the priorities of both Nodes and compare them.
          * Returns the index of the node whose priority is greater.
+         *
+         * If one of the node is null, then simply return the other node.
          */
         Node node1 = getNode(index1);
-        Node node2 = getNode(index2);
         if (node1.equals(null)) return index2;
+        Node node2 = getNode(index2);
         if (node2.equals(null)) return index1;
         double prio1 = node1.priority();
         double prio2 = node2.priority();
@@ -432,34 +434,13 @@ public class ArrayHeap<T> {
 
     /** Helper method that continuously move down a node as long as:
      * 1. The node is not a leaf
-     * 2. Its child/children's priority is greater than the node's priority.
+     * 2. There exists a child that has greater priority than the node's priority.
      */
     private void continuousBubbleDown(int index) {
         while ((!isLeaf(index)) && oneChildIsGreater(index)) {
-            /** If there's only left child, swap with the left child and update
-             * toBeChangedIndex to be the index of the left child.
-             */
-            if (hasOnlyLeftChild(index)) {
-                int nextPosition = getLeftOf(index);
-                bubbleDown(index);
-                index = nextPosition;
-            }
-            /** If there's only right child, swap with the right child and update
-             * input 'index' to be the index of the right child.
-             */
-            else if (hasOnlyRightChild(index)) {
-                int nextPosition = getRightOf(index);
-                bubbleDown(index);
-                index = nextPosition;
-            }
-            /** Otherwise, there are 2 children. Swap with whichever has greater priority and
-             * update input 'index' to be the index of the child with greater priority.
-             */
-            else {
-                int nextPosition = max(getLeftOf(index), getRightOf(index));
-                bubbleDown(index);
-                index = nextPosition;
-            }
+            int nextPosition = max(getLeftOf(index), getRightOf(index));
+            bubbleDown(index);
+            index = nextPosition;
         }
     }
 
@@ -481,6 +462,5 @@ public class ArrayHeap<T> {
             continuousBubbleDown(index);
         }
         /** Otherwise do nothing.*/
-        else;
     }
 }
