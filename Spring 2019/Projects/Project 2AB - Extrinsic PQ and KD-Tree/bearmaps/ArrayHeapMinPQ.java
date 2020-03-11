@@ -75,7 +75,6 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     }
 
-
     /** ==== Array Representation of the Heap ====
      *
      * Items indexing starts from 0.
@@ -97,4 +96,10 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         return items.get(index);
     }
 
+    private void swap(int index1, int index2){
+        Node node1 = getNodeAtIndex(index1);
+        Node node2 = getNodeAtIndex(index2);
+        items.set(index1, node2);
+        items.set(index2, node1);
+    }
 }
