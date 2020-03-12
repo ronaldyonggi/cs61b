@@ -209,28 +209,11 @@ public class ArrayHeap<T> {
 
     /* Bubbles down the node currently at the given index. */
     private void bubbleDown(int index) {
-        /** Technically it's easier to swap positions simply using the swap method. However
-         * for the sake of using the provided setLeft and setRight methods, use them
-         * instead.
+        /** The max method takes into account in case one of the children is
+         * null. Thus we don't need to worry whether the node
+         * has one child or two children.
          */
-
-        /** If there's no right node, swap with left node.
-         */
-        if (hasOnlyOneChild(index)){
-            Node currentNode = getNode(index);
-            Node leftChild = getNode(getLeftOf(index));
-            /** Set the current Node = left child Node first. Then set the left child
-             * = current Node.
-             */
-            setNode(index, leftChild);
-            setLeft(index, currentNode);
-        }
-        else {
-            /** If the node has 2 children, we choose the child with greater priority
-             * between the 2 and switch it with the current node.
-             */
-            swap(index, max(getLeftOf(index), getRightOf(index)));
-        }
+        swap(index, max(getLeftOf(index), getRightOf(index)));
 
     }
 
