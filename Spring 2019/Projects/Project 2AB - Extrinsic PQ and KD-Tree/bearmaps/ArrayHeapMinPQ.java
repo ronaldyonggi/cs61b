@@ -111,7 +111,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     }
 
     private Node getNodeAtIndex(int index){
-        return items.get(index);
+        return items[index];
     }
 
     private void swap(int index1, int index2){
