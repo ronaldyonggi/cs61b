@@ -164,6 +164,9 @@ public class ArrayHeap<T> {
         //YOUR CODE HERE
         /** Obtain the priorities of both Nodes and compare them. Then return the nodes whose
          * priority is lower.
+         *
+         * Recall that a null object doesn't have .equals() method!! If we use .equals(),
+         * we'll get an NullPointerException error. Use '=='!
          */
         Node node1 = getNode(index1);
         if (node1 == null) return index2;
@@ -395,6 +398,9 @@ public class ArrayHeap<T> {
          * Returns the index of the node whose priority is greater.
          *
          * If one of the node is null, then simply return the other node.
+         *
+         * Similar to min method, null object doesn't have .equals() method!
+         * Use '==' instead!
          */
         Node node1 = getNode(index1);
         if (node1 == null) return index2;
@@ -402,9 +408,6 @@ public class ArrayHeap<T> {
         Node node2 = getNode(index2);
         if (node2 == null) return index1;
 //        if (node2.equals(null)) return index1;
-        /** Remember that a null object doesn't have a .equals() method! Hence use '=='.
-         *
-         */
         double prio1 = node1.priority();
         double prio2 = node2.priority();
 
