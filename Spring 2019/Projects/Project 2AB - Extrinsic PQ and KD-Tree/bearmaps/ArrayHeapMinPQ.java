@@ -1,15 +1,23 @@
 package bearmaps;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 
 public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
-    /** Java doesn't allow generic array creation, thus I use ArrayList.
+    /** Use an array data structure. Generic array creation is not allowed in Java, hence
+     * the implementation uses a workaround. Explanation provided in ArrayHeapMinPQ
+     * constructor.
      *
      */
     private Node[] items;
+
+    /** Keeps track of how many elements present in the array.
+     *
+     */
+    private int size;
 
     /** We can use a HashMap containing...
      * 1. Key: the item of each node
@@ -19,7 +27,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
      * containsKey method. According to the official Oracle API docs, assuming the hash function
      * disperse the items properly among buckets, contains runtime is constant.
      */
-    private HashMap<T, Integer> maps;
+    private HashMap<T, Double> maps;
 
     private class Node {
         private T item;
@@ -43,16 +51,40 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         }
     }
 
+    /** ArrayHeapMinPQ Constructor.
+     * Typically Java doesn't allow generic array creation.
+     * The project FAQ hints that an easy fix is to use new ArrayHeapMinPQ.Node[size].
+     * This will give an "unchecked" warning, which can be suppressed
+     * with @SuppressWarnings.
+     *
+     */
     @SuppressWarnings("unchecked")
     public ArrayHeapMinPQ() {
         items = new ArrayHeapMinPQ.Node[10];
+        maps = new HashMap<T, Double>();
     }
 
     @Override
     public void add (T item, double priority) {
         if (contains(item)) throw new IllegalArgumentException();
-        items.add(new Node(item, priority));
-        maps.put(item, 1);
+        /** If the array is full, double the size of the array.
+         *
+         */
+        if (size() == items.length) resize(size() * 2);
+        /** Simply add an item by setting the array of [size]
+         * to be the new node.
+         *
+         */
+        items[size()] = new Node(item, priority);
+        /** Add the item to the maps.
+         *
+         */
+        maps.put(item, priority);
+        size++;
+        /** Adjust the index of the node that was just inserted in case
+         * the position is incorrect.
+         *
+         */
         fixIndex(size()-1);
     }
 
@@ -63,23 +95,32 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public T getSmallest(){
-        if (items.get(0) == null) throw new NoSuchElementException();
-        return items.get(0).getItem();
+        if (items[0] == null) throw new NoSuchElementException();
+        /** The node with the smallest priority is simply
+         * the first element in the array.
+         *
+         */
+        return items[0].getItem();
     }
 
     @Override
     public T removeSmallest(){
-        if (items.get(0) == null) throw new NoSuchElementException();
+        if (items[0] == null) throw new NoSuchElementException();
         T toBeReturned = getSmallest();
         maps.remove(toBeReturned);
-        items.remove(0);
+        /** Swap the last element with the first element of the array, then null
+         * that last element.
+         *
+         */
         swap(0, size()-1);
+        items[size() - 1] = null;
+        size--;
         return toBeReturned;
     }
 
     @Override
     public int size(){
-        return items.size();
+        return size;
     }
 
     @Override
@@ -110,15 +151,24 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         return (index - 1) / 2;
     }
 
+    private void resize(int capacity){
+        /** The Arrays.copyOf is a convenient method that returns a
+         * new array that has the same elements as the input array, but with
+         * a new length.
+         *
+         */
+        Node[] newItems = Arrays.copyOf(items, capacity);
+        items = newItems;
+    }
+
     private Node getNodeAtIndex(int index){
         return items[index];
     }
 
     private void swap(int index1, int index2){
-        Node node1 = getNodeAtIndex(index1);
-        Node node2 = getNodeAtIndex(index2);
-        items.set(index1, node2);
-        items.set(index2, node1);
+        Node temp = items[index1];
+        items[index1] = items[index2];
+        items[index2] = temp;
     }
 
     /** Helper method that returns the index of the Node that contains
@@ -147,10 +197,18 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         }
     }
 
+    /** Checks whether a node is a root. A node is a root
+     * if its index is 0.
+     *
+     */
     private boolean isRoot(int index){
-        return getParent(index) == 0;
+        return index == 0;
     }
 
+    /** Checks whether a node is a Leaf. A node is a leaf if it doesn't have
+     * a left child.
+     *
+     */
     private boolean isLeaf(int index){
         /** In heaps, there can't exist a node with only a single right child.
          * Therefore to check whether a node is a leaf, simply check whether
@@ -160,6 +218,10 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         return getNodeAtIndex(leftChildIndex) == null;
     }
 
+    /** Returns true if a node's parent has greater priority than
+     * the node's priority. Otherwise returns false.
+     *
+     */
     private boolean parentMorePriority(int index){
         double parentPriority = getNodeAtIndex(getParent(index)).getPriority();
         double currentPriority = getNodeAtIndex(index).getPriority();
@@ -169,6 +231,9 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         return parentPriority > currentPriority;
     }
 
+    /** Returns true if there exist a child that has less priority than the node's
+     * priority. Otherwise returns false.
+     */
     private boolean oneChildIsLess(int index){
         double currentPrio = getNodeAtIndex(index).getPriority();
 
@@ -197,14 +262,14 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         return rightChildNode == null;
     }
 
-    private int max(int index1, int index2) {
-        /** Obtain the priorities of both Nodes and compare them.
-         * Returns the index of the node whose priority is greater.
-         */
-        Node node1 = getNodeAtIndex(index1);
-        if (node1.equals(null)) return index2;
+    /** Takes in 2 indeces and return the index where the node's priority is less.
+     *
+     */
+    private int min(int index1, int index2) {
         Node node2 = getNodeAtIndex(index2);
-        if (node2.equals(null)) return index1;
+        if (node2 == null) return index1;
+        Node node1 = getNodeAtIndex(index1);
+        if (node1 == null) return index2;
         double prio1 = node1.getPriority();
         double prio2 = node2.getPriority();
 
@@ -212,11 +277,9 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         else return index2;
     }
 
-    private int min(int index1, int index2) {
-        if (max(index1, index2) == index1) return index2;
-        else return index1;
-    }
-
+    /** Takes in an index and moves that node up
+     *
+     */
     private void swimUp(int index) {
         /** Notice that we have the 'getParent' method and 'swap' method
          * at our disposal. Simply use these methods to swap between the
@@ -225,10 +288,17 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         swap(index, getParent(index));
     }
 
+    /** Takes in an index and moves that node down.
+     *
+     */
     private void swimDown(int index){
         swap(index, min(getLeftChild(index), getRightChild(index)));
     }
 
+    /** Takes in an index and continuously moves that node up as long as:
+     * 1. The node is not a root
+     * 2. The node's parent has greater priority
+     */
     private void continuousSwimUp(int index){
         while ((!isRoot(index)) && parentMorePriority(index)) {
             swimUp(index);
@@ -238,7 +308,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     /** Helper method that continuously move down a node as long as:
      * 1. The node is not a leaf
-     * 2. There exists a child that has greater priority than the node's priority.
+     * 2. There exists a child that has less priority than the node's.
      */
     private void continuousSwimDown(int index) {
         while ((!isLeaf(index)) && oneChildIsLess(index)) {
@@ -248,19 +318,16 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         }
     }
 
-    /** Helper method that fixes a node's index after it's mutated. Makes use of
-     * the continuousBubbleUp and continuousBubbleDown method.
+    /** Helper method that fixes a node's index after it's mutated.
      */
     private void fixIndex(int index){
-        /** As long as the current node is not a root and its priority is greater than its
-         * parent, move up.
+        /** As long as the node is not a root and the parent's priority is greater, move up.
          */
         if ((!isRoot(index)) && parentMorePriority(index)) {
             continuousSwimUp(index);
         }
-        /** Otherwise, as long as the current node is not a leaf and its
-         * child / children's priority is greater than the priority of the current node, move
-         * down.
+        /** Otherwise, as long as the node is not a leaf and there exist a child that
+         * has less priority than the node's, move down.
          */
         else if ((!isLeaf(index)) && oneChildIsLess(index)){
             continuousSwimDown(index);
