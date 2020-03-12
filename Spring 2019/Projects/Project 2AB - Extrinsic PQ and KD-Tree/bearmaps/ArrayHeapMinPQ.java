@@ -48,7 +48,9 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public void add (T item, double priority) {
-
+        items.add(new Node(item, priority));
+        maps.put(item, 1);
+        fixIndex(size()-1);
     }
 
     @Override
@@ -66,6 +68,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         T toBeReturned = getSmallest();
         items.remove(0);
         swap(0, size()-1);
+        return toBeReturned;
     }
 
     @Override
@@ -112,6 +115,31 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         items.set(index2, node1);
     }
 
+    /** Helper method that returns the index of the Node that contains
+     * the input item. If the node isn't found, return -1.
+     */
+    private int findIndex(int index, T item){
+        Node currentNode = getNodeAtIndex(index);
+        /** If we've reached a null node, that means the node isn't found.
+         * Return -1.
+         */
+        if (currentNode == null) return -1;
+
+        /** If the item is found, return the index.
+         *
+         */
+        else if (currentNode.item().equals(item)) return index;
+        /** Otherwise, recursive call findIndex on both left child
+         * and right child and return whichever's final result is not -1. If
+         * both are -1, then it will return -1.
+         */
+        else {
+            int leftSide = findIndex(getLeftChild(index), item);
+            int rightSide = findIndex(getRightChild(index), item);
+            if (leftSide == -1) return rightSide;
+            else return leftSide;
+        }
+    }
     private boolean isRoot(int index){
         return getParent(index) == 0;
     }
