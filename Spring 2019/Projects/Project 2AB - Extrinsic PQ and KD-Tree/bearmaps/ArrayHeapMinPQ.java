@@ -126,7 +126,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     @Override
     public void changePriority(T item, double priority){
         if (!contains(item)) throw new NoSuchElementException();
-        int toBeChangedIndex = findIndex(1, item);
+        int toBeChangedIndex = findIndex(0, item);
         Node toBeChangedNode = getNodeAtIndex(toBeChangedIndex);
         toBeChangedNode.setPriority(priority);
         fixIndex(toBeChangedIndex);
@@ -236,21 +236,8 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
      */
     private boolean oneChildIsLess(int index){
         double currentPrio = getNodeAtIndex(index).getPriority();
-
-        /** If the node has only one (left) child, compare the priority of the
-         * left child with the current node's.
-         */
-        if (hasOnlyOneChild(index)){
-            double leftChildPrio = getNodeAtIndex(getLeftChild(index)).getPriority();
-            return leftChildPrio < currentPrio;
-        }
-        /** Otherwise if there are 2 children, get the priority of the
-         * less of the 2 children and compare it with the current node's.
-         */
-        else {
-            int greaterChildIndex = min(getLeftChild(index), getRightChild(index));
-            return getNodeAtIndex(greaterChildIndex).getPriority() < currentPrio;
-        }
+        int lessChildIndex = min(getLeftChild(index), getRightChild(index));
+        return getNodeAtIndex(lessChildIndex).getPriority() < currentPrio;
     }
 
     /** Helper method to check whether whether a node has only one (left) child.
@@ -273,7 +260,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         double prio1 = node1.getPriority();
         double prio2 = node2.getPriority();
 
-        if (prio1 > prio2) return index1;
+        if (prio1 < prio2) return index1;
         else return index2;
     }
 
