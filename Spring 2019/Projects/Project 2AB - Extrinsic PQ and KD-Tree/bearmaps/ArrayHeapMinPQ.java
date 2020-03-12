@@ -128,7 +128,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         /** If the item is found, return the index.
          *
          */
-        else if (currentNode.item().equals(item)) return index;
+        else if (currentNode.getItem().equals(item)) return index;
         /** Otherwise, recursive call findIndex on both left child
          * and right child and return whichever's final result is not -1. If
          * both are -1, then it will return -1.
