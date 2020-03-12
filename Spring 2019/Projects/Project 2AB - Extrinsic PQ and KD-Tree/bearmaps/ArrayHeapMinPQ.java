@@ -202,4 +202,35 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     }
 
 
+    /** Helper method that continuously move down a node as long as:
+     * 1. The node is not a leaf
+     * 2. There exists a child that has greater priority than the node's priority.
+     */
+    private void continuousSwimDown(int index) {
+        while ((!isLeaf(index)) && oneChildIsLess(index)) {
+            int nextPosition = min(getLeftChild(index), getRightChild(index));
+            swimDown(index);
+            index = nextPosition;
+        }
+    }
+
+    /** Helper method that fixes a node's index after it's mutated. Makes use of
+     * the continuousBubbleUp and continuousBubbleDown method.
+     */
+    private void fixIndex(int index){
+        /** As long as the current node is not a root and its priority is greater than its
+         * parent, move up.
+         */
+        if ((!isRoot(index)) && parentMorePriority(index)) {
+            continuousSwimUp(index);
+        }
+        /** Otherwise, as long as the current node is not a leaf and its
+         * child / children's priority is greater than the priority of the current node, move
+         * down.
+         */
+        else if ((!isLeaf(index)) && oneChildIsLess(index)){
+            continuousSwimDown(index);
+        }
+        /** Otherwise do nothing.*/
+    }
 }
