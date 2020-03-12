@@ -2,6 +2,7 @@ package bearmaps;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.NoSuchElementException;
 
 public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
@@ -48,6 +49,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public void add (T item, double priority) {
+        if (contains(item)) throw new IllegalArgumentException();
         items.add(new Node(item, priority));
         maps.put(item, 1);
         fixIndex(size()-1);
@@ -60,11 +62,13 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public T getSmallest(){
+        if (items.get(0) == null) throw new NoSuchElementException();
         return items.get(0).getItem();
     }
 
     @Override
     public T removeSmallest(){
+        if (items.get(0) == null) throw new NoSuchElementException();
         T toBeReturned = getSmallest();
         items.remove(0);
         swap(0, size()-1);
@@ -78,6 +82,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public void changePriority(T item, double priority){
+        if (!contains(item)) throw new NoSuchElementException();
         int toBeChangedIndex = findIndex(1, item);
         Node toBeChangedNode = getNodeAtIndex(toBeChangedIndex);
         toBeChangedNode.setPriority(priority);
@@ -105,10 +110,6 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     private Node getNodeAtIndex(int index){
         return items.get(index);
-    }
-
-    private void setNodeAtIndex(int index, Node n){
-        items.set(index, n);
     }
 
     private void swap(int index1, int index2){
@@ -232,7 +233,6 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
             index = getParent(index);
         }
     }
-
 
     /** Helper method that continuously move down a node as long as:
      * 1. The node is not a leaf
