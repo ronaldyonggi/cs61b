@@ -9,7 +9,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     /** Java doesn't allow generic array creation, thus I use ArrayList.
      *
      */
-    private ArrayList<Node> items;
+    private Node[] items;
 
     /** We can use a HashMap containing...
      * 1. Key: the item of each node
@@ -43,8 +43,9 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         }
     }
 
-    private ArrayHeapMinPQ() {
-        items = new ArrayList<>();
+    @SuppressWarnings("unchecked")
+    public ArrayHeapMinPQ() {
+        items = new ArrayHeapMinPQ.Node[10];
     }
 
     @Override
@@ -70,6 +71,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     public T removeSmallest(){
         if (items.get(0) == null) throw new NoSuchElementException();
         T toBeReturned = getSmallest();
+        maps.remove(toBeReturned);
         items.remove(0);
         swap(0, size()-1);
         return toBeReturned;
