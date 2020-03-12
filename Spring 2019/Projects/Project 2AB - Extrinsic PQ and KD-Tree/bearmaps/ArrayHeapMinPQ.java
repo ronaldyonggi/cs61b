@@ -63,7 +63,9 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public T removeSmallest(){
-
+        T toBeReturned = getSmallest();
+        items.remove(0);
+        swap(0, size()-1);
     }
 
     @Override
@@ -99,6 +101,10 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         return items.get(index);
     }
 
+    private void setNodeAtIndex(int index, Node n){
+        items.set(index, n);
+    }
+
     private void swap(int index1, int index2){
         Node node1 = getNodeAtIndex(index1);
         Node node2 = getNodeAtIndex(index2);
@@ -111,14 +117,12 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
     }
 
     private boolean isLeaf(int index){
-        int leftChildIndex = getLeftChild(index);
-        int rightChildIndex = getRightChild(index);
-        Node leftChildNode = getNodeAtIndex(leftChildIndex);
-        Node rightChildNode = getNodeAtIndex(rightChildIndex);
-        /** Returns true if both right child and left child are null.
-         * False otherwise.
+        /** In heaps, there can't exist a node with only a single right child.
+         * Therefore to check whether a node is a leaf, simply check whether
+         * it has a left child.
          */
-        return (leftChildNode == null && rightChildNode == null);
+        int leftChildIndex = getLeftChild(index);
+        return getNodeAtIndex(leftChildIndex) == null;
     }
 
     private boolean parentMorePriority(int index){
@@ -128,6 +132,34 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
          * of the current node. Returns false otherwise.
          */
         return parentPriority > currentPriority;
+    }
+
+    private boolean oneChildIsLess(int index){
+        double currentPrio = getNodeAtIndex(index).getPriority();
+
+        /** If the node has only one (left) child, compare the priority of the
+         * left child with the current node's.
+         */
+        if (hasOnlyOneChild(index)){
+            double leftChildPrio = getNodeAtIndex(getLeftChild(index)).getPriority();
+            return leftChildPrio < currentPrio;
+        }
+        /** Otherwise if there are 2 children, get the priority of the
+         * less of the 2 children and compare it with the current node's.
+         */
+        else {
+            int greaterChildIndex = min(getLeftChild(index), getRightChild(index));
+            return getNodeAtIndex(greaterChildIndex).getPriority() < currentPrio;
+        }
+    }
+
+    /** Helper method to check whether whether a node has only one (left) child.
+     * Simply check whether a node has a right child.
+     */
+    private boolean hasOnlyOneChild(int index){
+        int rightChildIndex = getRightChild(index);
+        Node rightChildNode = getNodeAtIndex(rightChildIndex);
+        return rightChildNode == null;
     }
 
     private int max(int index1, int index2) {
@@ -168,5 +200,6 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
             index = getParent(index);
         }
     }
+
 
 }
