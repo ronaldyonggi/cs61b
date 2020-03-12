@@ -7,7 +7,7 @@ import static org.junit.Assert.assertFalse;
 public class ArrayHeapMinPQTest {
 
     @Test
-    public void addRemoveTest(){
+    public void addRemoveContainsTest(){
         /** Tests add and size.
          *
          */
@@ -16,7 +16,7 @@ public class ArrayHeapMinPQTest {
         x.add("Huh", 1);
         assertEquals(2, x.size());
 
-        /** Tests removeSmallest()
+        /** Tests removeSmallest() and contains().
          *
          */
         String removed = x.removeSmallest();
