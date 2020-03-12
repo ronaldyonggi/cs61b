@@ -18,7 +18,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
      * containsKey method. According to the official Oracle API docs, assuming the hash function
      * disperse the items properly among buckets, contains runtime is constant.
      */
-    private HashMap<T, int> maps;
+    private HashMap<T, Integer> maps;
 
     private class Node {
         private T item;
@@ -78,7 +78,10 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
 
     @Override
     public void changePriority(T item, double priority){
-
+        int toBeChangedIndex = findIndex(1, item);
+        Node toBeChangedNode = getNodeAtIndex(toBeChangedIndex);
+        toBeChangedNode.setPriority(priority);
+        fixIndex(toBeChangedIndex);
     }
 
     /** ==== Array Representation of the Heap ====
@@ -140,6 +143,7 @@ public class ArrayHeapMinPQ<T> implements ExtrinsicMinPQ<T> {
             else return leftSide;
         }
     }
+
     private boolean isRoot(int index){
         return getParent(index) == 0;
     }
