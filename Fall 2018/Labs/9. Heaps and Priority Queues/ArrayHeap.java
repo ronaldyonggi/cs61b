@@ -291,23 +291,28 @@ public class ArrayHeap<T> {
     }
 
     /** Helper method that returns the index of the Node that contains
-     * the corresponding item. If the node doesn't exist, return -1.
+     * the input item. If the node isn't found, return -1.
      */
     private int findIndex(int index, T item){
         Node currentNode = getNode(index);
-        if (currentNode.item().equals(item)) return index;
+        /** If we've reached a null node, that means the node isn't found.
+         * Return -1.
+         */
+        if (currentNode == null) return -1;
+
+        /** If the item is found, return the index.
+         *
+         */
+        else if (currentNode.item().equals(item)) return index;
+        /** Otherwise, recursive call findIndex on both left child
+         * and right child and return whichever's final result is not -1. If
+         * both are -1, then it will return -1.
+         */
         else {
-            Node leftChild = getNode(getLeftOf(index));
-            Node rightChild = getNode(getRightOf(index));
-            if (leftChild == null && rightChild == null) return -1;
-            else if (leftChild == null) return findIndex(getRightOf(index), item);
-            else if (rightChild == null) return findIndex(getLeftOf(index), item);
-            else {
-                int leftSide = findIndex(getLeftOf(index), item);
-                int rightSide = findIndex(getRightOf(index), item);
-                if (leftSide == -1) return rightSide;
-                else return leftSide;
-            }
+            int leftSide = findIndex(getLeftOf(index), item);
+            int rightSide = findIndex(getRightOf(index), item);
+            if (leftSide == -1) return rightSide;
+            else return leftSide;
         }
     }
 
