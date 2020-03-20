@@ -4,6 +4,10 @@ class WeirdListClient {
     /** Return the result of adding N to each element of L. */
     static WeirdList add(WeirdList L, int n) {
         // REPLACE THIS LINE WITH THE RIGHT ANSWER.
+        /**
+         * x -> x + n is a syntax for Java lambda expression, where the left side is
+         * the lambda operator and the right side is the body.
+         */
         return L.map(x -> x + n);
     }
 
@@ -24,7 +28,8 @@ class WeirdListClient {
      *       if, switch, while, for, do, try, or the ?: operator.
      */
 
-    /** the sumFunction class is used for WeirdListClient's sum method.
+    /** the sumFunction class is self written for use
+     * in WeirdListClient's sum method.
      *
      */
     private static class sumFunction implements IntUnaryFunction {
