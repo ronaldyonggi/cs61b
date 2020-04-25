@@ -1,15 +1,15 @@
 # CS61B Progress Tracker
 
-My progress with UC Berkeley CS61B - Data Structures. Included materials based on [Fall 2018](https://inst.eecs.berkeley.edu/~cs61b/fa18/) and [Spring 2019](https://sp19.datastructur.es/) semesters. 
+My progress with UC Berkeley CS61B - Data Structures for [Fall 2018](https://inst.eecs.berkeley.edu/~cs61b/fa18/) and [Spring 2019](https://sp19.datastructur.es/) materials. 
 
-Lecture notes are written in .ipynb files, which can be opened via Jupyter Notebook or Jupyter Lab. Since this class mainly uses Java, installation of Java kernel (I used [IJava](https://github.com/SpencerPark/IJava)) is required to execute the cells containing Java code.
+Lecture notes are written in .ipynb files which can be opened via Jupyter Notebook or Jupyter Lab. As the course uses Java as the main language, installation of Java kernel (I used [IJava](https://github.com/SpencerPark/IJava)) is required to execute notebook cells containing Java code.
 
 
 | Symbol             | Meaning                                                 |
 | ------------------ | ------------------------------------------------------- |
-| :heavy_check_mark: | Totally Completed                                       |
-| :white_check_mark: | Completed with skipped sections (not totally completed) |
-| :warning:          | Which section is incomplete / skipped                   |
+| :heavy_check_mark: | Completed                                       |
+| :white_check_mark: | Incomplete |
+| :warning:          | Indicator of which section is incomplete                  |
 
 # Spring 2019 Progress 
 
