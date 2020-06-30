@@ -1,9 +1,10 @@
 # CS61B Progress Tracker
 
-My progress with UC Berkeley CS61B - Data Structures for [Fall 2018](https://inst.eecs.berkeley.edu/~cs61b/fa18/) and [Spring 2019](https://sp19.datastructur.es/) materials. 
+My work with UC Berkeley CS61B - Data Structures for [Fall 2018](https://inst.eecs.berkeley.edu/~cs61b/fa18/) and [Spring 2019](https://sp19.datastructur.es/) semester. 
 
-Lecture notes are written in .ipynb files which can be opened via Jupyter Notebook or Jupyter Lab. As the course uses Java as the main language, installation of Java kernel (I used [IJava](https://github.com/SpencerPark/IJava)) is required to execute notebook cells containing Java code.
+CS61B uses Java as its main programming language. Installation of Java kernel [IJava](https://github.com/SpencerPark/IJava)) is required to run Jupyter notebooks containing Java code.
 
+# Symbol Definition
 
 | Symbol             | Meaning                                                 |
 | ------------------ | ------------------------------------------------------- |
